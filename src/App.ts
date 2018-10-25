@@ -1,9 +1,8 @@
 import * as minimist from 'minimist'
+import Translate from './cmds/Translate' 
 class Amigo {
   args: minimist.ParsedArgs = minimist(process.argv.slice(2))
   constructor(){
-    console.log(this.args)
-
     let cmd = this.args._[0] || 'help'
 
     if (this.args.version || this.args.v) {
@@ -16,7 +15,7 @@ class Amigo {
 
     switch (cmd) {
       case 'translate':
-        console.log(cmd)
+        let trans = new Translate(this.args._)
         break
 
       case 'conjugate':
