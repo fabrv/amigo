@@ -1,5 +1,6 @@
 import * as minimist from 'minimist'
 import Translate from './cmds/Translate' 
+import Detect from './cmds/Detect';
 class Amigo {
   args: minimist.ParsedArgs = minimist(process.argv.slice(2))
   constructor(){
@@ -23,7 +24,7 @@ class Amigo {
         break
 
       case 'detect':
-        console.log(cmd)
+      let detect = new Detect(this.args._)
         break
 
       case 'help':

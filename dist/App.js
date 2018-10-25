@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const minimist = require("minimist");
+const Translate_1 = require("./cmds/Translate");
+const Detect_1 = require("./cmds/Detect");
 class Amigo {
     constructor() {
         this.args = minimist(process.argv.slice(2));
-        console.log(this.args);
         let cmd = this.args._[0] || 'help';
         if (this.args.version || this.args.v) {
             cmd = 'version';
@@ -14,13 +15,13 @@ class Amigo {
         }
         switch (cmd) {
             case 'translate':
-                console.log(cmd);
+                let trans = new Translate_1.default(this.args._);
                 break;
             case 'conjugate':
                 console.log(cmd);
                 break;
             case 'detect':
-                console.log(cmd);
+                let detect = new Detect_1.default(this.args._);
                 break;
             case 'help':
                 console.log(`
