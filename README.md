@@ -1,8 +1,15 @@
 # amigo NodeJS
-Node CLI for Spanish translation and verb conjugation
+Node CLI for Spanish translation and verb conjugation.  
+This is a Node port of a [python proyect](https://github.com/hecris/amigo) made by Christopher He.
 
 ![alt text](/screenshots/conjugate.gif?raw=true)
 ![alt text](/screenshots/translate.gif?raw=true)
+
+# Dependecies
+* [Axios](https://www.npmjs.com/package/axios)
+* [Chalk](https://www.npmjs.com/package/chalk)
+* [Minimist](https://www.npmjs.com/package/minimist)
+* [node-html-parser](https://www.npmjs.com/package/node-html-parser)
 
 # Installation
 ## Using npm
@@ -33,3 +40,7 @@ node dist/index [command] <options>
 | detect    | Detects language. Eg: `amigo detect 'text to detect'`                           |
 | conjugate | Lists conjugations for verbs in spanish Eg: `amigo conjugate ser`               |
 | help      | Get help                                                                        |
+
+# Credits
+* *Author*: Fabrizzio Rivera - [fabrv](https://github.com/fabrv)
+* *Original project*: Christopher He - [hecris](https://github.com/hecris)
