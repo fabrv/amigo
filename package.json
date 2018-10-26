@@ -1,5 +1,5 @@
 {
-  "name": "amigo",
+  "name": "amigo-spanish",
   "version": "1.0.0",
   "description": "Node CLI for Spanish translation and verb conjugation",
   "main": "dist/index.js",
