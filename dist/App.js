@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const minimist = require("minimist");
 const Translate_1 = require("./cmds/Translate");
 const Detect_1 = require("./cmds/Detect");
+const Conjugate_1 = require("./cmds/Conjugate");
 class Amigo {
     constructor() {
         this.args = minimist(process.argv.slice(2));
@@ -18,7 +19,7 @@ class Amigo {
                 let trans = new Translate_1.default(this.args._);
                 break;
             case 'conjugate':
-                console.log(cmd);
+                let conjugate = new Conjugate_1.default(this.args._[1]);
                 break;
             case 'detect':
                 let detect = new Detect_1.default(this.args._);

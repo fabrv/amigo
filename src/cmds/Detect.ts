@@ -1,4 +1,6 @@
 import axios from 'axios'
+import codes from './languageCodes'
+
 class Detect {
   url: string = 'https://translate.yandex.net/api/v1.5/tr.json/detect?'
   key: string = 'trnsl.1.1.20181025T171317Z.ef1c81cb9a030620.1799cee5559bf9985b24d90d6226fa9db7a6e38a'  

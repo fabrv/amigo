@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "npm run build:live",
-    "build": "tsc",
+    "build": "tsc && npm link",
     "build:live": "nodemon --exec ts-node src/App.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,11 +27,14 @@
   },
   "homepage": "https://github.com/fabrv/amigo#readme",
   "dependencies": {
+    "@types/chalk": "^2.2.0",
     "@types/google-translate-api": "^2.3.0",
     "@types/minimist": "^1.2.0",
     "@types/node": "^10.12.0",
     "axios": "^0.18.0",
+    "chalk": "^2.4.1",
     "minimist": "^1.2.0",
+    "node-html-parser": "^1.1.10",
     "nodemon": "^1.18.4",
     "ora": "^3.0.0",
     "ts-node": "^7.0.1",
