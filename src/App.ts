@@ -2,6 +2,8 @@ import * as minimist from 'minimist'
 import Translate from './cmds/Translate' 
 import Detect from './cmds/Detect';
 import Conjugate from './cmds/Conjugate';
+
+const { version } = require('../package.json')
 class Amigo {
   args: minimist.ParsedArgs = minimist(process.argv.slice(2))
   constructor(){
@@ -16,6 +18,10 @@ class Amigo {
     }
 
     switch (cmd) {
+      case 'version':
+        console.log(`v${version}`)
+        process.exit()
+        break
       case 'translate':
         let trans = new Translate(this.args._)
         break
@@ -31,7 +37,7 @@ class Amigo {
       case 'help':
         console.log(`
         amigo [command] <options>
-
+        
         translate ............... Translate phrase or words to spanish
         detect .................. Detects language
         conjugate ............... Lists conjugations for verbs in spanish

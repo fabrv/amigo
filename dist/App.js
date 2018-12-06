@@ -4,6 +4,7 @@ const minimist = require("minimist");
 const Translate_1 = require("./cmds/Translate");
 const Detect_1 = require("./cmds/Detect");
 const Conjugate_1 = require("./cmds/Conjugate");
+const { version } = require('../package.json');
 class Amigo {
     constructor() {
         this.args = minimist(process.argv.slice(2));
@@ -15,6 +16,10 @@ class Amigo {
             cmd = 'help';
         }
         switch (cmd) {
+            case 'version':
+                console.log(`v${version}`);
+                process.exit();
+                break;
             case 'translate':
                 let trans = new Translate_1.default(this.args._);
                 break;
